@@ -133,6 +133,9 @@ pre {
   display: table;
   clear: both; }
 
+.wrapper .home {
+  background-image: url(../img/back.jpg);
+}
 /**
  * Icons
  */
