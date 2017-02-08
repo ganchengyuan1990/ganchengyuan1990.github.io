@@ -135,6 +135,7 @@ pre {
 
 .wrapper .home {
   background-image: url(../img/back.jpg);
+  height: 300px;
 }
 /**
  * Icons
