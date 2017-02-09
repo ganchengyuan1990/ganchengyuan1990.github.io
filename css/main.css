@@ -149,6 +149,9 @@ pre {
 .wrapper .home {
   //background-image: url(../img/back.jpg);
   height: 300px;
+  position: absolute;
+  top: 30%;
+  width: 100%;
 }
 /**
  * Icons
@@ -164,6 +167,31 @@ pre {
 /**
  * Site header
  */
+
+#headlines .textItem {
+    color: #fff
+}
+
+#headlines .current {
+    display: block;
+    opacity: 1 !important
+}
+
+#headlines .textItem {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all ease 800ms;
+    text-transform: uppercase;
+    margin: 10px 0 !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    padding: 0 10px
+}
+
 .site-header {
   //border-top: 5px solid #424242;
   //border-bottom: 1px solid #e8e8e8;
@@ -184,11 +212,11 @@ pre {
     border-bottom: 3px solid hsla(0,0%,100%,.5);
     text-transform: uppercase;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 14px;
     color: #fff;
     text-align: center;
-    position: relative;
-    top: 30%;
+    line-height: 35px;
+    font-weight: 700;
 }
 
 @media (max-width: 460px)
