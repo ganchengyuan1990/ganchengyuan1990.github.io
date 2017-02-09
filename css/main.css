@@ -69,11 +69,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: #fff;
   text-decoration: none; }
-  a:visited {
-    color: #1756a9; }
-  a:hover {
-    color: #111;
-    text-decoration: underline; }
+  // a:visited {
+  //   color: #1756a9; }
+  // a:hover {
+  //   color: #111;
+  //   text-decoration: underline; }
 
 /**
  * Blockquotes
@@ -261,26 +261,6 @@ pre {
 .footer-heading {
   font-size: 18px;
   margin-bottom: 15px; }
-
-
-.list: {
-    width: 224px;
-    position: absolute;
-    left: 50%;
-    bottom: 10%;
-    transform: translate3d(-50%,0,0);
-    -ms-flex-pack: distribute;
-    z-index: 999;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: space-around;
-    -moz-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-align: center;
-    -moz-align-items: center;
-    align-items: center;
-}
 
 
 .social-media-list {
@@ -518,3 +498,23 @@ pre {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+
+.list: {
+    width: 224px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate3d(-50%,0,0);
+    -ms-flex-pack: distribute;
+    z-index: 999;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;
+}
