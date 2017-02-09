@@ -39,9 +39,9 @@
                 <div data-v-a51f793e="" id="headlines">
                     <h1 data-v-a51f793e="" class="text-center textItem">Hello <span data-v-a51f793e="" class="blue">Vue2.0</span></h1> 
                     <h1 data-v-a51f793e="" class="text-center textItem">我是<span data-v-a51f793e="" class="blue">JasonGan</span></h1>  
-                    <h1 data-v-a51f793e="" class="text-center textItem current">不忘<span data-v-a51f793e="" class="blue">初心</span> 方得<span data-v-a51f793e="" class="blue">始终</span></h1> 
-                    <h1 data-v-a51f793e="" class="text-center textItem"><span data-v-a51f793e="" class="blue">坚持</span>才是捷径!</h1> 
-                    <h1 data-v-a51f793e="" class="text-center textItem">开始<span data-v-a51f793e="" class="blue">行动</span>吧!</h1> 
+                    <h1 data-v-a51f793e="" class="text-center textItem">时间<span data-v-a51f793e="" class="blue">很可爱</span> 同样<span data-v-a51f793e="" class="blue">也很可怕</span></h1> 
+                    <h1 data-v-a51f793e="" class="text-center textItem"><span data-v-a51f793e="" class="blue">每天</span>进步一点</h1> 
+                    <h1 data-v-a51f793e="" class="text-center textItem">开始<span data-v-a51f793e="" class="blue">行动</span>起来</h1> 
                 </div>
             </div>
         </div>
@@ -94,15 +94,28 @@
 </body>
 
 <script>
-if ("serviceWorker" in navigator) {
+    if ("serviceWorker" in navigator) {
 
-    navigator.serviceWorker.register('./serviceWorker.js', { scope: "./" }) //setting scope of sw
-    .then(function(registration) {
-      console.info('Service worker is registered!');
-    })
-    .catch(function(error) {
-      console.error('Service worker failed ', error);
-    });
-}
+        navigator.serviceWorker.register('./serviceWorker.js', { scope: "./" }) //setting scope of sw
+        .then(function(registration) {
+          console.info('Service worker is registered!');
+        })
+        .catch(function(error) {
+          console.error('Service worker failed ', error);
+        });
+    }
+
+
+    var _interval = 0;
+
+    window.onload = function(e) {
+        setInterval(function() {
+            var textItem = document.getElementsByClassName('textItem')
+            var displayItem = document.querySelector('.current');
+            if(displayItem) displayItem.classList.remove('current');
+            textItem[_interval % textItem.length].classList.add('current');
+            _interval++;
+        }, 3000);
+    }
 </script>
 </html>
