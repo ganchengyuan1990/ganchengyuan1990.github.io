@@ -43,7 +43,22 @@
         <div class="wrapper">
             <div class="footer-col-wrapper">
                 <div class="footer-col footer-col-1">
-                    <ul class="contact-list deep-list">
+                    <ul class="contact-list deep-list" style="width: 224px;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate3d(-50%,0,0);
+    -ms-flex-pack: distribute;
+    z-index: 999;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: space-around;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    -moz-align-items: center;
+    align-items: center;">
                         <div class="index-btnBox-each text-center" data-v-a51f793e=""><a href="https://ganchengyuan1990.github.io/blog/">我的博客</a></div>
                         <div class="index-btnBox-each text-center" data-v-a51f793e=""><a href="mailto:ganchengyuan1990@163.com">我的邮箱</a></div>
                     </ul>
@@ -71,4 +86,16 @@
     </footer>
 </body>
 
+<script>
+if ("serviceWorker" in navigator) {
+
+    navigator.serviceWorker.register('./serviceWorker.js', { scope: "./" }) //setting scope of sw
+    .then(function(registration) {
+      console.info('Service worker is registered!');
+    })
+    .catch(function(error) {
+      console.error('Service worker failed ', error);
+    });
+}
+</script>
 </html>
