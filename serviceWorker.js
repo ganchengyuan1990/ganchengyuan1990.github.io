@@ -38,7 +38,6 @@ function updateStaticCache() {
 // Fetch
 ////////
 function onFetch(event) {
-  debugger
   const request = event.request;
 
   if (shouldAlwaysFetch(request)) {
@@ -75,7 +74,6 @@ function networkedAndCache(request) {
 }
 
 function cachedOrNetworked(request) {
-  debugger
   return caches.match(request)
     .then((response) => {
       log(response ? '(cached)' : '(network: cache miss)', request.method, request.url);
